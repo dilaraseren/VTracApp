@@ -1,0 +1,35 @@
+﻿@model VEHTRA.Models.Personel
+@{
+    ViewBag.Title = "PersonelEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Personel Ekleme Sayfası</h2>
+<br />
+
+
+@using (Html.BeginForm("PersonelEkle", "Personel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.FullName)
+    @Html.TextBoxFor(x => x.FullName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Telefon)
+    @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.About)
+    @Html.TextBoxFor(x => x.About, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.PersonelGorseli)
+    <br />
+    <input type="file" name="PersonelGorseli" />
+    <br />
+    @Html.LabelFor(x => x.Departman)
+    @Html.DropDownListFor(x => x.DepartmanId, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+
+    @*@Html.TextBoxFor(x => x.KategoriId, new { @class = "form-control" })*@
+    <br />
+
+    <button class="btn btn-success">Kaydet</button>
+</form>
+}

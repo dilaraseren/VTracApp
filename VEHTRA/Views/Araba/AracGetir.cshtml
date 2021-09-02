@@ -1,0 +1,45 @@
+﻿@model VEHTRA.Models.Araba
+@{
+    ViewBag.Title = "AracGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Araç Güncelleme Sayfası</h2>
+<br />
+
+@using (Html.BeginForm("AracGuncelle", "Araba", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.Plaka)
+        @Html.TextBoxFor(x => x.Plaka, new { @class = "form-control" })
+        @Html.HiddenFor(x => x.Id)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Model)
+        @Html.TextBoxFor(x => x.Model, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.RuhsatNo)
+        @Html.TextBoxFor(x => x.RuhsatNo, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.AlisTarihi)
+        @Html.TextBoxFor(x => x.AlisTarihi, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.TeslimTarihi)
+        @Html.TextBoxFor(x => x.TeslimTarihi, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Durum)
+        @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })
+
+    </div>
+    <button class="btn btn-warning">Güncelle</button>
+}
+
+

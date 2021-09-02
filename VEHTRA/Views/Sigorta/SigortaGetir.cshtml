@@ -1,0 +1,42 @@
+﻿@model VEHTRA.Models.Sigorta
+@{
+    ViewBag.Title = "SigortaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Sigorta Güncelleme Sayfası</h2>
+<br />
+
+@using (Html.BeginForm("SigortaGuncelle", "Sigorta", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.SigortaSon)
+        @Html.TextBoxFor(x => x.SigortaSon, new { @class = "form-control" })
+        @Html.HiddenFor(x => x.Id)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.SigortaSonraki)
+        @Html.TextBoxFor(x => x.SigortaSonraki, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.SigortaDurumu)
+        @Html.TextBoxFor(x => x.SigortaDurumu, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.SigortaSonucu)
+        @Html.TextBoxFor(x => x.SigortaSonucu, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.SigortaUcreti)
+        @Html.TextBoxFor(x => x.SigortaUcreti, new { @class = "form-control" })
+
+    </div>
+   
+    <button class="btn btn-warning">Güncelle</button>
+}
+
+
+

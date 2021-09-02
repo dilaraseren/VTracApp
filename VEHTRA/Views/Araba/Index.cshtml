@@ -1,0 +1,57 @@
+﻿@using VEHTRA.Models;
+@model List<Araba>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@using (Html.BeginForm("Index", "Araba", FormMethod.Get))
+{
+
+
+    <table class="table table-bordered" style="margin-top:20px;">
+        <tr>
+
+
+            <th>Plaka</th>
+            <th>Model</th>
+            <th>Marka</th>
+            <th>Cins</th>
+            <th>Yakıt Türü</th>
+            <th>Ruhsat No</th>
+            <th>Alış Tarihi</th>
+            <th>Teslim Tarihi</th>
+            <th> Durum</th>
+            <th>Güncelle</th>
+
+
+
+
+        </tr>
+
+        @foreach (var p in Model)
+        {
+
+            <tr>
+
+                <td> @p.Plaka </td>
+                <td> @p.Model </td>
+                <td> @p.Marka </td>
+                <td> @p.Cins </td>
+                <td> @p.YakitCinsi </td>
+                <td> @p.RuhsatNo </td>
+                <td> @p.AlisTarihi  </td>
+                <td> @p.TeslimTarihi  </td>
+                <td> @p.Durum </td>
+
+
+
+
+                <td><a href="/Araba/AracGetir/@p.Id" class="btn btn-warning">Güncelle</a></td>
+
+
+            </tr>
+        }
+
+    </table>
+    <a href="/Araba/YeniArac/" class="btn btn-dark">Araç Ekle</a>
+}

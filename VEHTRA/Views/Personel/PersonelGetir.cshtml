@@ -1,0 +1,37 @@
+﻿@model VEHTRA.Models.Personel
+@{
+    ViewBag.Title = "PersonelGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<h2>Personel Güncelleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("PersonelGuncelle", "Personel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    <div class="form-group">
+        @Html.HiddenFor(x => x.Id)
+        @Html.LabelFor(x => x.FullName)
+        @Html.TextBoxFor(x => x.FullName, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(x => x.Telefon)
+        @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(x => x.About)
+        @Html.TextBoxFor(x => x.About, new { @class = "form-control" })
+        <br />
+        
+        @*@Html.TextBoxFor(x => x.PersonelGorseli, new { @class = "form-control" })*@
+        <br />
+        @Html.LabelFor(x => x.Departman)
+        @Html.DropDownListFor(x => x.DepartmanId, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+        <br />
+        <input type="file" name="PersonelGorseli" />
+        <button class="btn btn-default" style="background-color:yellowgreen">Güncelle</button>
+
+    </div>
+
+}
+

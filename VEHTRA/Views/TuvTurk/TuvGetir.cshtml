@@ -1,0 +1,41 @@
+﻿@model VEHTRA.Models.TuvTakip
+@{
+    ViewBag.Title = "TuvGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>TÜV TÜRK Güncelleme Sayfası</h2>
+<br />
+
+@using (Html.BeginForm("SigortaGuncelle", "Sigorta", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.TuvMuayeneSon)
+        @Html.TextBoxFor(x => x.TuvMuayeneSon, new { @class = "form-control" })
+        @Html.HiddenFor(x => x.Id)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.TuvMuayeneSonraki)
+        @Html.TextBoxFor(x => x.TuvMuayeneSonraki, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.MuayeneDurumu)
+        @Html.TextBoxFor(x => x.MuayeneDurumu, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.MuayeneSonucu)
+        @Html.TextBoxFor(x => x.MuayeneSonucu, new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.TuvMuayeneUcreti)
+        @Html.TextBoxFor(x => x.TuvMuayeneUcreti, new { @class = "form-control" })
+
+    </div>
+
+    <button class="btn btn-warning">Güncelle</button>
+}
+

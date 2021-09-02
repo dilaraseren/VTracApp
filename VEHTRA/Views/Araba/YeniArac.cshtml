@@ -1,0 +1,56 @@
+﻿@model VEHTRA.Models.Araba
+@{
+    ViewBag.Title = "YeniArac";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<br />
+
+<h2>Yeni Araç Sayfası</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.Plaka)
+    @Html.TextBoxFor(x => x.Plaka, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Model)
+    @Html.TextBoxFor(x => x.Model, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.RuhsatNo)
+    @Html.TextBoxFor(x => x.RuhsatNo, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.AlisTarihi)
+    @Html.TextBoxFor(x => x.AlisTarihi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.TeslimTarihi)
+    @Html.TextBoxFor(x => x.TeslimTarihi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Marka)
+    @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Cins)
+    @Html.TextBoxFor(x => x.Cins, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.YakitCinsi)
+    @Html.TextBoxFor(x => x.YakitCinsi, new { @class = "form-control" })
+    <br />
+    @*@Html.LabelFor(x => x.Durum)
+        @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })
+        <br />*@
+    @*@Html.LabelFor(x => x.Model.Id)
+        @Html.DropDownListFor(x => x.Id, (List<SelectListItem>)ViewBag.p2, new { @class = "form-control" })*@
+    @*@Html.TextBoxFor(x => x.KategoriId, new { @class = "form-control" })*@
+    <br />
+
+
+    <button class="btn btn-success" id="btn3">Kaydet</button>
+
+    <script>
+        $('#btn3').click(function () {
+            swal("İşlem Başarılı!", "Araç eklendi!", "success");
+        });
+    </script>
+</form>
+
+
