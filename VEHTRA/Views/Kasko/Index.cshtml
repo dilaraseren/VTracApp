@@ -1,0 +1,49 @@
+﻿@using VEHTRA.Models;
+@model List<Kasko>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Index", "Kasko", FormMethod.Get))
+{
+
+
+    <table class="table table-bordered" style="margin-top:20px;">
+        <tr>
+
+
+            <th>Son Kasko Kontrol Tarihi </th>
+            <th>Sonraki Kasko Kontrol Tarihi</th>
+            <th>Kasko Durumu</th>
+            <th>Kasko Sonucu</th>
+            <th>Kasko Ücreti</th>
+            <th>Güncelle</th>
+
+
+
+        </tr>
+
+        @foreach (var p in Model)
+        {
+
+            <tr>
+
+                <td> @p.KaskoSon </td>
+                <td> @p.KaskoSonraki </td>
+                <td> @p.KaskoDurumu </td>
+                <td> @p.KaskoSonucu </td>
+                <td> @p.KaskoUcreti </td>
+
+
+
+
+                <td><a href="/Sigorta/SigortaGetir/@p.Id" class="btn btn-warning">Güncelle</a></td>
+
+
+            </tr>
+        }
+
+    </table>
+
+}

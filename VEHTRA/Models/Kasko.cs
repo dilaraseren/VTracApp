@@ -12,6 +12,10 @@ namespace VEHTRA.Models
         public int Id { get; set; }
         public DateTime KaskoTarihi { get; set; }
         public decimal KaskoUcreti { get; set; }
+        public DateTime KaskoSon { get; set; }
+        public DateTime KaskoSonraki { get; set; }
+        public bool KaskoDurumu { get; set; }
+        public string KaskoSonucu { get; set; }
         public ICollection<Araba> Arabas { get; set; }
     }
 }
