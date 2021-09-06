@@ -2477,6 +2477,7 @@
     <Content Include="Views\Kasko\Index.cshtml" />
     <Content Include="Views\TuvTurk\Yazdır.cshtml" />
     <Content Include="Views\Sigorta\Yazdır.cshtml" />
+    <Content Include="Views\Kasko\Yazdır.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

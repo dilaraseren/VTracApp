@@ -16,5 +16,10 @@ namespace VEHTRA.Controllers
             var value = c.Kaskos.ToList();
             return View(value);
         }
+
+        public ActionResult Yazdır()
+        {
+            return View();
+        }
     }
 }

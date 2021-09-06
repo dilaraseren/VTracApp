@@ -1,5 +1,5 @@
 ﻿@using VEHTRA.Models
-@model List<TuvTakip>
+@model List<Kasko>
 
 @{
     Layout = null;
@@ -33,13 +33,11 @@
 
             <tr>
 
-                <th>#</th>
-                <th>Son TÜV Muayene Tarihi </th>
-                <th>Sonraki TÜV Muayene Tarihi</th>
-                <th>Muayene Durumu</th>
-                <th>Muayene Sonucu</th>
-                <th>Muayene Ücreti</th>
-              
+                <th>Son Kasko Kontrol Tarihi </th>
+                <th>Sonraki Kasko Kontrol Tarihi</th>
+                <th>Kasko Durumu</th>
+                <th>Kasko Sonucu</th>
+                <th>Kasko Ücreti</th>
 
             </tr>
 
@@ -52,13 +50,12 @@
             {
 
             <tr>
-
-                <td> @x.Id </td>
-                <td> @x.TuvMuayeneSon </td>
-                <td> @x.TuvMuayeneSonraki </td>
-                <td> @x.MuayeneDurumu </td>
-                <td> @x.MuayeneSonucu </td>
-                <td> @x.TuvMuayeneUcreti </td>
+                <td>@x.Id</td>
+                <td> @x.KaskoSon </td>
+                <td> @x.KaskoSonraki </td>
+                <td> @x.KaskoDurumu </td>
+                <td> @x.KaskoSonucu </td>
+                <td> @x.KaskoUcreti </td>
 
             </tr>
 
