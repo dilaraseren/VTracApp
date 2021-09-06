@@ -1,50 +1,55 @@
 ﻿@using VEHTRA.Models;
 @model List<TuvTakip>
 
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-}
+@{ ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+
 
 @using (Html.BeginForm("Index", "TuvTurk", FormMethod.Get))
 {
 
 
-    <table class="table table-bordered" style="margin-top:20px;">
-        <tr>
+<table class="table table-bordered" style="margin-top:20px;">
+    <tr>
 
-
-            <th>Son TÜV Muayene Tarihi </th>
-            <th>Sonraki TÜV Muayene Tarihi</th>
-            <th>Muayene Durumu</th>
-            <th>Muayene Sonucu</th>
-            <th>Muayene Ücreti</th>
-            <th>Güncelle</th>
-
-           
-
-        </tr>
-
-        @foreach (var p in Model)
-        {
-
-            <tr>
-
-                <td> @p.TuvMuayeneSon </td>
-                <td> @p.TuvMuayeneSonraki </td>
-                <td> @p.MuayeneDurumu </td>
-                <td> @p.MuayeneSonucu </td>
-                <td> @p.TuvMuayeneUcreti </td>
+        <th>#</th>
+        <th>Son TÜV Muayene Tarihi </th>
+        <th>Sonraki TÜV Muayene Tarihi</th>
+        <th>Muayene Durumu</th>
+        <th>Muayene Sonucu</th>
+        <th>Muayene Ücreti</th>
+        <th>Güncelle</th>
 
 
 
 
-                <td><a href="/TuvTurk/TuvGetir/@p.Id" class="btn btn-warning">Güncelle</a></td>
+    </tr>
+
+    @foreach (var p in Model)
+    {
+
+<tr>
+    <td> @p.Id </td>
+    <td> @p.TuvMuayeneSon </td>
+    <td> @p.TuvMuayeneSonraki </td>
+    <td> @p.MuayeneDurumu </td>
+    <td> @p.MuayeneSonucu </td>
+    <td> @p.TuvMuayeneUcreti </td>
 
 
-            </tr>
-        }
 
-    </table>
-   
+
+
+    <td><a href="/TuvTurk/TuvGetir/@p.Id" class="btn btn-warning">Güncelle</a></td>
+
+
+
+
+</tr>}
+</table>
 }
+<a href="/TuvTurk/Yazdır" class="btn btn-dark">Yazdır</a>
+
+
+
+

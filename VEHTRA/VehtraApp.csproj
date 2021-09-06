@@ -2475,6 +2475,8 @@
     <Content Include="Views\TuvTurk\YeniTuv.cshtml" />
     <Content Include="Views\TuvTurk\TuvGetir.cshtml" />
     <Content Include="Views\Kasko\Index.cshtml" />
+    <Content Include="Views\TuvTurk\Yazdır.cshtml" />
+    <Content Include="Views\Sigorta\Yazdır.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -62,5 +62,12 @@ namespace VEHTRA.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Yazdır()
+        {
+            var value = c.TuvTakips.ToList();
+            return View(value);
+        }
+       
+
     }
 }

@@ -62,5 +62,11 @@ namespace VEHTRA.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Yazdır()
+        {
+            var value = c.Sigortas.ToList();
+            return View(value);
+        }
+
     }
 }
