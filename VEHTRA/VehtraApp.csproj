@@ -2122,6 +2122,7 @@
     <Content Include="weblogin\css\popup-box.css" />
     <Content Include="weblogin\css\style.css" />
     <Content Include="weblogin\fonts\fontawesome-webfont.svg" />
+    <Content Include="weblogin\images\Asset 38.png" />
     <Content Include="weblogin\images\bg.jpg" />
     <Content Include="weblogin\images\bilsoft_logo_4.png" />
     <Content Include="weblogin\images\mavi.png" />
