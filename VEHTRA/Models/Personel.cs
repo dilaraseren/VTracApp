@@ -20,7 +20,12 @@ namespace VEHTRA.Models
         [StringLength(200)]
         public string About { get; set; }
 
+        [StringLength(100)]
+        public string Mail { get; set; }
 
+
+        [StringLength(20)]
+        public string Sifre { get; set; }
 
         [StringLength(15)]
         public string Telefon { get; set; }
