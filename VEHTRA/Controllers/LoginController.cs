@@ -20,15 +20,28 @@ namespace VEHTRA.Controllers
             return View();
         }
 
+        [HttpGet]
+        public PartialViewResult Partial1()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public PartialViewResult Partial1(Personel p)
+        {
+            c.Personels.Add(p);
+            c.SaveChanges();
+            return PartialView();
+        }
 
         [HttpGet]
-        public ActionResult PersonelLogin1()
+        public ActionResult CariLogin1()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult PersonelLogin1(Personel p)
+        public ActionResult CariLogin1(Personel p)
         {
             var bilgiler = c.Personels.FirstOrDefault(x => x.Mail == p.Mail && x.Sifre == p.Sifre);
             if (bilgiler != null)
@@ -66,6 +79,5 @@ namespace VEHTRA.Controllers
             }
 
         }
-
     }
 }
