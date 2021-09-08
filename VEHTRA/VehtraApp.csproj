@@ -2126,6 +2126,7 @@
     <Content Include="weblogin\images\bg.jpg" />
     <Content Include="weblogin\images\bilsoft_logo_4.png" />
     <Content Include="weblogin\images\mavi.png" />
+    <Content Include="weblogin\images\copy.jpg" />
     <Content Include="weblogin\index.html" />
     <Content Include="weblogin\js\jquery-2.1.4.min.js" />
     <Content Include="weblogin\js\jquery.magnific-popup.js" />
