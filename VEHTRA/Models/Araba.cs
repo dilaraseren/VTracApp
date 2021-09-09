@@ -14,6 +14,9 @@ namespace VEHTRA.Models
         [StringLength(15)]
         public string Plaka { get; set; }
 
+        [StringLength(17)]
+        public string VIN { get; set; } //motor sase numarası
+
         [StringLength(10)]
         public string RuhsatNo { get; set; }
 
@@ -28,7 +31,6 @@ namespace VEHTRA.Models
 
         [StringLength(100)]
         public string YakitCinsi { get; set; }
-
         public DateTime AlisTarihi { get; set; }
         public DateTime TeslimTarihi { get; set; }
         public bool Durum { get; set; }

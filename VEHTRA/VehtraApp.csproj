@@ -133,6 +133,7 @@
     <Compile Include="Controllers\KaskoController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
+    <Compile Include="Controllers\RandevuController.cs" />
     <Compile Include="Controllers\SigortaController.cs" />
     <Compile Include="Controllers\TuvTurkController.cs" />
     <Compile Include="Global.asax.cs">
@@ -145,6 +146,7 @@
     <Compile Include="Models\Departman.cs" />
     <Compile Include="Models\Kasko.cs" />
     <Compile Include="Models\Personel.cs" />
+    <Compile Include="Models\RandevuHareket.cs" />
     <Compile Include="Models\Sigorta.cs" />
     <Compile Include="Models\TuvTakip.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -2755,6 +2757,7 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\Partial1.cshtml" />
     <Content Include="Views\Login\Partial2.cshtml" />
+    <Content Include="Views\Randevu\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

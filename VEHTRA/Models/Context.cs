@@ -15,5 +15,6 @@ namespace VEHTRA.Models
         public DbSet<Sigorta> Sigortas { get; set; }
         public DbSet<Departman> Departmen { get; set; }
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<RandevuHareket> RandevuHarekets { get; set; } 
     }
 }
