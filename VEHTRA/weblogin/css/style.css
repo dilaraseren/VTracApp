@@ -203,7 +203,7 @@ p {
     text-transform: capitalize;
     margin-bottom: .2em;
     color: #000000;
-}
+} 
 
 .register-right a {
     text-transform: uppercase;
@@ -211,7 +211,7 @@ p {
     font-weight: 300;
     letter-spacing: 1px;
     word-spacing: 5px;
-    color: #000000;
+    color: royalblue;
 }
 
 .link a {
