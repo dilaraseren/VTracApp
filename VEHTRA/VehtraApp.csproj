@@ -2758,6 +2758,7 @@
     <Content Include="Views\Login\Partial1.cshtml" />
     <Content Include="Views\Login\Partial2.cshtml" />
     <Content Include="Views\Randevu\Index.cshtml" />
+    <Content Include="Views\Randevu\YeniRandevu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

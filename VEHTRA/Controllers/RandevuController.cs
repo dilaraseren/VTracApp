@@ -23,7 +23,7 @@ namespace VEHTRA.Controllers
             List<SelectListItem> deger1 = (from x in c.Arabas.ToList()
                                            select new SelectListItem
                                            {
-                                               Text = x.Marka,
+                                               Text = x.Plaka,
                                                Value = x.Id.ToString()
                                            }).ToList();
 
@@ -47,7 +47,7 @@ namespace VEHTRA.Controllers
         [HttpPost]
         public ActionResult YeniRandevu(RandevuHareket r)
         {
-            r.Tarih = DateTime.Parse(DateTime.Now.ToShortDateString());
+            r.Tarih = DateTime.Parse(DateTime.Now.ToLongTimeString());
             c.RandevuHarekets.Add(r);
             c.SaveChanges();
             return RedirectToAction("Index");
