@@ -130,6 +130,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArabaController.cs" />
+    <Compile Include="Controllers\IstatistikController.cs" />
     <Compile Include="Controllers\KaskoController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
@@ -2759,9 +2760,11 @@
     <Content Include="Views\Login\Partial2.cshtml" />
     <Content Include="Views\Randevu\Index.cshtml" />
     <Content Include="Views\Randevu\YeniRandevu.cshtml" />
+    <Content Include="Views\Istatistik\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Istar\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -20,20 +20,30 @@
     @Html.LabelFor(x => x.RuhsatNo)
     @Html.TextBoxFor(x => x.RuhsatNo, new { @class = "form-control" })
     <br />
+    @Html.LabelFor(x => x.VIN)
+    @Html.TextBoxFor(x => x.VIN, new { @class = "form-control" })
+    <br />
     @Html.LabelFor(x => x.AlisTarihi)
     @Html.TextBoxFor(x => x.AlisTarihi, new { @class = "form-control" })
     <br />
+
     @Html.LabelFor(x => x.TeslimTarihi)
     @Html.TextBoxFor(x => x.TeslimTarihi, new { @class = "form-control" })
-    <br />
-    @Html.LabelFor(x => x.Marka)
-    @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
     <br />
     @Html.LabelFor(x => x.Cins)
     @Html.TextBoxFor(x => x.Cins, new { @class = "form-control" })
     <br />
     @Html.LabelFor(x => x.YakitCinsi)
     @Html.TextBoxFor(x => x.YakitCinsi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.TuvTakip)
+    @Html.TextBoxFor(x => x.TuvTakip.Id, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Kasko)
+    @Html.TextBoxFor(x => x.Kasko.Id, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Sigorta)
+    @Html.TextBoxFor(x => x.Sigorta.Id, new { @class = "form-control" })
     <br />
     @*@Html.LabelFor(x => x.Durum)
         @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })

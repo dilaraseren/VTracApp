@@ -34,8 +34,8 @@ namespace VEHTRA.Controllers
         [HttpPost]
         public ActionResult YeniArac(Araba p)
         {
-            p.AlisTarihi = DateTime.Parse(DateTime.Now.ToLongTimeString());
-            p.TeslimTarihi = DateTime.Parse(DateTime.Now.ToLongTimeString());
+            //p.AlisTarihi = DateTime.Parse(DateTime.Now.ToLongTimeString());
+            //p.TeslimTarihi = DateTime.Parse(DateTime.Now.ToLongTimeString());
             c.Arabas.Add(p);
             c.SaveChanges();
             return RedirectToAction("Index");
