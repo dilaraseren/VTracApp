@@ -145,6 +145,9 @@
     <Compile Include="Models\Araba.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\Departman.cs" />
+    <Compile Include="Models\Dinamik.cs" />
+    <Compile Include="Models\Fatura.cs" />
+    <Compile Include="Models\FaturaKalem.cs" />
     <Compile Include="Models\Kasko.cs" />
     <Compile Include="Models\Personel.cs" />
     <Compile Include="Models\RandevuHareket.cs" />

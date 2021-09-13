@@ -16,5 +16,7 @@ namespace VEHTRA.Models
         public DbSet<Departman> Departmen { get; set; }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<RandevuHareket> RandevuHarekets { get; set; } 
+        public DbSet<Fatura> Faturas { get; set; }
+        public DbSet<FaturaKalem> FaturaKalems { get; set; }
     }
 }
