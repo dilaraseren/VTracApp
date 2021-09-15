@@ -1,0 +1,50 @@
+﻿@using VEHTRA.Models
+@model List<HasarKayit>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered" style="margin-top:20px;">
+    <tr>
+
+        <th>#</th>
+        <th>Açıklama </th>
+        <th>Ücret</th>
+        <th>Firma</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        
+
+
+    </tr>
+    @foreach (var k in Model)
+    {
+
+<tr>
+    <th>
+        @k.Id
+    </th>
+    <td>
+
+        @k.Aciklama
+    </td>
+    <td>
+
+        @k.Ucret
+
+    </td>
+    <td>
+
+        @k.Firma
+    </td>
+    <td><a href="/HasarKayit/HasarSil/@k.Id" class="btn btn-danger">Sil</a></td>
+    <td><a href="/HasarKayit/HasarGetir/@k.Id" class="btn  btn-warning">Güncelle</a></td>
+   
+
+</tr>
+    }
+</table>
+<br />
+<a href="/HasarKayit/HasarEkle/" class="btn btn-dark">Hasar Ekle</a>

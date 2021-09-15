@@ -1,0 +1,49 @@
+﻿@using VEHTRA.Models
+@model List<FaturaKalem>
+
+@{
+    ViewBag.Title = "FaturaDetay";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Fatura Kalem Ekranı</h2>
+<br />
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Sıra No - Seri No : @ViewBag.ftrs </li>
+</ol>
+
+<table class=" table table-hover">
+    <tr>
+
+        <th>Açıklama</th>
+        <th>Miktar</th>
+        <th>Birim Fiyat</th>
+        <th>Tutar</th>
+        <th>Vergi Dairesi</th>
+        <th>Teslim Alan</th>
+        <th>Teslim Eden</th>
+
+
+
+    </tr>
+    @foreach (var x in Model)
+    {
+
+
+        <tr>
+
+            <td> @x.Aciklama </td>
+            <td>   @x.Miktar  </td>
+            <td> @x.BirimFiyat  </td>
+            <td> @x.Tutar  </td>
+            <td> @x.Fatura.VergiDairesi  </td>
+            <td> @x.Fatura.TeslimAlan  </td>
+            <td> @x.Fatura.TeslimEden  </td>
+
+
+
+        </tr>
+    }
+
+</table>

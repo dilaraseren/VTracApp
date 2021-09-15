@@ -130,6 +130,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArabaController.cs" />
+    <Compile Include="Controllers\FaturaController.cs" />
+    <Compile Include="Controllers\HasarKayitController.cs" />
     <Compile Include="Controllers\IstatistikController.cs" />
     <Compile Include="Controllers\KaskoController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -143,15 +145,20 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Araba.cs" />
+    <Compile Include="Models\SinifGrup5.cs" />
+    <Compile Include="Models\SinifGrup3.cs" />
+    <Compile Include="Models\SinifGrup2.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\Departman.cs" />
     <Compile Include="Models\Dinamik.cs" />
     <Compile Include="Models\Fatura.cs" />
     <Compile Include="Models\FaturaKalem.cs" />
+    <Compile Include="Models\HasarKayit.cs" />
     <Compile Include="Models\Kasko.cs" />
     <Compile Include="Models\Personel.cs" />
     <Compile Include="Models\RandevuHareket.cs" />
     <Compile Include="Models\Sigorta.cs" />
+    <Compile Include="Models\SinifGrup.cs" />
     <Compile Include="Models\TuvTakip.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -2764,10 +2771,22 @@
     <Content Include="Views\Randevu\Index.cshtml" />
     <Content Include="Views\Randevu\YeniRandevu.cshtml" />
     <Content Include="Views\Istatistik\Index.cshtml" />
+    <Content Include="Views\Fatura\Dinamik.cshtml" />
+    <Content Include="Views\Fatura\Index.cshtml" />
+    <Content Include="Views\Fatura\FaturaEkle.cshtml" />
+    <Content Include="Views\Fatura\FaturaGetir.cshtml" />
+    <Content Include="Views\Fatura\YeniKalem.cshtml" />
+    <Content Include="Views\Fatura\FaturaDetay.cshtml" />
+    <Content Include="Views\HasarKayit\Index.cshtml" />
+    <Content Include="Views\Istatistik\KolayTablolar.cshtml" />
+    <Content Include="Views\Istatistik\Partial1.cshtml" />
+    <Content Include="Views\Istatistik\Partial2.cshtml" />
+    <Content Include="Views\Istatistik\Partial3.cshtml" />
+    <Content Include="Views\Istatistik\Partial4.cshtml" />
+    <Content Include="Views\Istatistik\Partial5.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Istar\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -18,5 +18,6 @@ namespace VEHTRA.Models
         public DbSet<RandevuHareket> RandevuHarekets { get; set; } 
         public DbSet<Fatura> Faturas { get; set; }
         public DbSet<FaturaKalem> FaturaKalems { get; set; }
+        public DbSet<HasarKayit> HasarKayits { get; set; }
     }
 }

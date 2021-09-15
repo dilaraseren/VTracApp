@@ -1,0 +1,42 @@
+﻿@using VEHTRA.Models
+@model List<Fatura>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<table class="table table-bordered" style="margin-top:20px;">
+    <tr>
+
+        <th>Seri Sıra No</th>
+        <th>Tarih</th>
+        <th>Saat</th>
+        <th>Toplam</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+        <th>Yeni Kalem</th>
+
+    </tr>
+    @foreach (var k in Model)
+    {
+
+        <tr>
+
+            <td>@k.SeriNo @k.SiraNo</td>
+            <td>@k.Tarih</td>
+            <td>@k.Saat</td>
+            <td>@k.Toplam</td>
+
+            <td><a href="/Fatura/FaturaGetir/@k.Id" class="btn  btn-warning">Güncelle</a></td>
+            <td><a href="/Fatura/FaturaDetay/@k.Id" class="btn  btn-primary">Detay</a></td>
+            <td><a href="/Fatura/YeniKalem/@k.Id" class="btn  btn-default" style="background-color:cadetblue">Ekle</a></td>
+
+
+        </tr>
+    }
+</table>
+<br />
+<a href="/Fatura/Dinamik/" class="btn btn-dark">Yeni Fatura Girişi </a>
+<br />
+<br />
