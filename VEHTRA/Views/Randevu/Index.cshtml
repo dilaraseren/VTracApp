@@ -5,60 +5,98 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+
+
+
+@*<link href="~/Content/bootstrap.css" rel="stylesheet" />*@
+
+<link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<!-- overlayScrollbars -->
+<link rel="stylesheet" href="~/AdminLTE-3.0.4/dist/css/adminlte.min.css">
+<!-- Google Font: Source Sans Pro -->
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 <br />
-<table id="tbl1" class="table table-bordered" style="margin-top:20px;">
-    <thead>
+
+<section class="content">
+
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Randevu Sistemi</h3>
+
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                    <i class="fas fa-minus"></i>
+                </button>
+
+            </div>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-striped projects">
+                <thead>
+                    <tr>
+
+                        <th  style="width:10%">Araç</th>
+                        <th  style="width:10%">Personel</th>
+                        <th  style="width:10%">Tarih</th>
+                        <th  style="width:10%">Adres</th>
+                        
+                        
+
+                        <th style="width: 20%">
+                        </th>
+                    </tr>
+                </thead>
+                @foreach (var p in Model)
+                {
+    <tbody>
         <tr>
 
-            <th>#</th>
-            <th>Araç</th>
-            <th>Personel</th>
-            <th>Tarih</th>
-            <th>Adres</th>
-            <th>Güncelle</th>
-            <th>Detaylar</th>
 
-
-
-        </tr>
-    </thead>
-
-    @foreach (var p in Model)
-    {
-
-        <tr>
-            <th> @p.RandevuId </th>
+           
             <td> @p.Araba.Plaka </td>
             <td> @p.Personel.FullName</td>
             <td>@p.Tarih</td>
             <td>@p.Adres</td>
-          
-
-            <td><a href="/Randevu/RandevuGetir/@p.RandevuId" class="btn btn-warning">Güncelle</a></td>
-            <td><a href="/Randevu/RandevuDetay/@p.RandevuId" class="btn  btn-primary">Detaylar</a></td>
 
 
+            <td class="project-actions text-right">
+                <a class="btn btn-primary btn-sm" href="/Araba/AracDetay/">
+                    <i class="fas fa-folder">
+                    </i>
+                    View
+                </a>
+                <a class="btn btn-info btn-sm" href="/Araba/AracGetir/">
+                    <i class="fas fa-pencil-alt">
+                    </i>
+                    Edit
+                </a>
+                <a class="btn btn-danger btn-sm" href="/Araba/AracSil/">
+                    <i class="fas fa-trash">
+                    </i>
+                    Delete
+                </a>
+            </td>
         </tr>
-    }
-</table>
+
+    </tbody>}
+            </table>
+        </div>
+        <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+
+</section>
+
 <a href="/Randevu/YeniRandevu/" class="btn btn-dark">Randevu Ekle</a>
 
-@*<link href="~/Content/bootstrap.css" rel="stylesheet" />*@
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
-
-<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
-
-<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-
-<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
-
-<script>
-
-    $('#tbl1').dataTable({});
-
-</script>
-
+<script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="~/AdminLTE-3.0.4/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="~/AdminLTE-3.0.4/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="~/AdminLTE-3.0.4/dist/js/demo.js"></script>
 

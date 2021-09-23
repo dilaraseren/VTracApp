@@ -5,49 +5,100 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
 
 
-@using (Html.BeginForm("Index", "TuvTurk", FormMethod.Get))
-{
+<link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<!-- overlayScrollbars -->
+<link rel="stylesheet" href="~/AdminLTE-3.0.4/dist/css/adminlte.min.css">
+<!-- Google Font: Source Sans Pro -->
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+<br />
+
+<section class="content">
 
 
-<table class="table table-bordered" style="margin-top:20px;">
-    <tr>
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">TÜV TÜRK Paneli</h3>
 
-        <th>#</th>
-        <th>Son TÜV Muayene Tarihi </th>
-        <th>Sonraki TÜV Muayene Tarihi</th>
-        <th>Muayene Durumu</th>
-        <th>Muayene Sonucu</th>
-        <th>Muayene Ücreti</th>
-        <th>Güncelle</th>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                    <i class="fas fa-minus"></i>
+                </button>
+
+            </div>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-striped projects">
+                <thead>
+                    <tr>
+
+                        <th style="width:20%">
+                            Son TÜV TÜRK Muayene Tarihi
+                        </th>
+                        <th style="width: 20%">
+                            Sonraki TÜV TÜRK Muayene Tarihi
+                        </th>
+                        <th style="width: 20%">
+                            TÜV TÜRK Muayene Sonucu
+                        </th>
+                        <th style="width: 10%">
+                            TÜV TÜRK Ücreti
+                        </th>
+                       
+
+                        <th style="width: 20%">
+                        </th>
+                    </tr>
+                </thead>
+                @foreach (var p in Model)
+                {
+    <tbody>
+        <tr>
 
 
+            <td> @p.TuvMuayeneSon </td>
+            <td> @p.TuvMuayeneSonraki </td>
+            <td> @p.MuayeneSonucu </td>
+            <td> @p.TuvMuayeneUcreti </td>
+           
 
 
-    </tr>
+            <td class="project-actions text-right">
+                <a class="btn btn-primary btn-sm" href="/Araba/AracDetay/@p.Id">
+                    <i class="fas fa-folder">
+                    </i>
+                    View
+                </a>
+                <a class="btn btn-info btn-sm" href="/Araba/AracGetir/@p.Id">
+                    <i class="fas fa-pencil-alt">
+                    </i>
+                    Edit
+                </a>
+                <a class="btn btn-danger btn-sm" href="/Araba/AracSil/">
+                    <i class="fas fa-trash">
+                    </i>
+                    Delete
+                </a>
+            </td>
+        </tr>
 
-    @foreach (var p in Model)
-    {
+    </tbody>}
+            </table>
+        </div>
+        <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
 
-<tr>
-    <td> @p.Id </td>
-    <td> @p.TuvMuayeneSon </td>
-    <td> @p.TuvMuayeneSonraki </td>
-    <td> @p.MuayeneDurumu </td>
-    <td> @p.MuayeneSonucu </td>
-    <td> @p.TuvMuayeneUcreti </td>
+</section>
 
-
-
-
-
-    <td><a href="/TuvTurk/TuvGetir/@p.Id" class="btn btn-warning">Güncelle</a></td>
-
-
-
-
-</tr>}
-</table>
-}
+<script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="~/AdminLTE-3.0.4/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="~/AdminLTE-3.0.4/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="~/AdminLTE-3.0.4/dist/js/demo.js"></script>
 <a href="/TuvTurk/Yazdır" class="btn btn-dark">Yazdır</a>
 
 

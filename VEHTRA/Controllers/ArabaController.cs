@@ -61,6 +61,25 @@ namespace VEHTRA.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult AracSil(int id)
+        {
+            var p = c.Arabas.Find(id);
+            p.Durum = false;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+
+        public ActionResult AracDetay()
+        {
+
+            ArabaDetay ud = new ArabaDetay();
+           
+            ud.Deger1 = c.Arabas.Where(x => x.Id == 1).ToList();
+            ud.Deger2 = c.Detays.Where(y => y.DetayId == 1).ToList();
+            return View(ud);
+
+        }
 
     }
 }

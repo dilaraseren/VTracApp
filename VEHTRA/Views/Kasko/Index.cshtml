@@ -6,46 +6,97 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-@using (Html.BeginForm("Index", "Kasko", FormMethod.Get))
-{
+<link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<!-- overlayScrollbars -->
+<link rel="stylesheet" href="~/AdminLTE-3.0.4/dist/css/adminlte.min.css">
+<!-- Google Font: Source Sans Pro -->
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+<br />
+
+<section class="content">
 
 
-    <table class="table table-bordered" style="margin-top:20px;">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Kasko Paneli</h3>
+
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                    <i class="fas fa-minus"></i>
+                </button>
+
+            </div>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-striped projects">
+                <thead>
+                    <tr>
+
+                        <th style="width:10%">
+                            Son Kasko Tarihi
+                        </th>
+                        <th style="width: 10%">
+                            Sonraki Kasko Tarihi
+                        </th>
+                        <th style="width: 10%">
+                            Kasko Sonucu
+                        </th>
+                        <th style="width: 10%">
+                            Kasko Ücreti
+                        </th>
+                        
+
+                        <th style="width: 20%">
+                        </th>
+                    </tr>
+                </thead>
+                @foreach (var p in Model)
+                {
+    <tbody>
         <tr>
 
 
-            <th>Son Kasko Kontrol Tarihi </th>
-            <th>Sonraki Kasko Kontrol Tarihi</th>
-            <th>Kasko Durumu</th>
-            <th>Kasko Sonucu</th>
-            <th>Kasko Ücreti</th>
-            <th>Güncelle</th>
+            <td> @p.KaskoSon </td>
+            <td> @p.KaskoSonraki </td>
+            <td> @p.KaskoSonucu </td>
+            <td> @p.KaskoUcreti </td>
+          
 
-
-
+            <td class="project-actions text-right">
+                <a class="btn btn-primary btn-sm" href="/Araba/AracDetay/@p.Id">
+                    <i class="fas fa-folder">
+                    </i>
+                    View
+                </a>
+                <a class="btn btn-info btn-sm" href="/Araba/AracGetir/@p.Id">
+                    <i class="fas fa-pencil-alt">
+                    </i>
+                    Edit
+                </a>
+                <a class="btn btn-danger btn-sm" href="/Araba/AracSil/">
+                    <i class="fas fa-trash">
+                    </i>
+                    Delete
+                </a>
+            </td>
         </tr>
 
-        @foreach (var p in Model)
-        {
+    </tbody>}
+            </table>
+        </div>
+        <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
 
-            <tr>
+</section>
 
-                <td> @p.KaskoSon </td>
-                <td> @p.KaskoSonraki </td>
-                <td> @p.KaskoDurumu </td>
-                <td> @p.KaskoSonucu </td>
-                <td> @p.KaskoUcreti </td>
-
-
-
-
-                <td><a href="/Kasko/KaskoGetir/@p.Id" class="btn btn-warning">Güncelle</a></td>
-
-
-            </tr>
-        }
-
-    </table>
-
-}
+<script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="~/AdminLTE-3.0.4/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="~/AdminLTE-3.0.4/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="~/AdminLTE-3.0.4/dist/js/demo.js"></script>
 <a href="/Kasko/Yazdır" class="btn btn-dark">Yazdır</a>
